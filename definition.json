@@ -23,23 +23,23 @@
     ],
     "paths": {
         "/SumNumbers": {
-            "post": {
+            "get": {
                 "operationId": "",
-                "summary": "Sum Numbers - POST",
+                "summary": "Sum Numbers - GET",
                 "parameters": [
                     {
                         "name": "num1",
                         "in": "query",
                         "description": "First number",
-                        "type": "integer",
-                        "format": "int32"
+                        "type": "string",
+                        "format": "string"
                     },
                     {
                         "name": "num2",
                         "in": "query",
                         "description": "Second number",
-                        "type": "integer",
-                        "format": "int32"
+                        "type": "string",
+                        "format": "string"
                     }
                 ],
                 "produces": [
