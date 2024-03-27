@@ -50,9 +50,6 @@
                 "responses": {
                     "200": {
                         "description": "Success",
-                        "schema": {
-                            "$ref": "#/definitions/BooleanBaseResponse"
-                        },
                         "examples": {
                             "application/json": {
                                 "result": [
