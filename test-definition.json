@@ -85,18 +85,6 @@
                         "description": "Success",
                         "schema": {
                             "$ref": "#/definitions/StringBaseResponse"
-                        },
-                        "examples": {
-                            "application/json": {
-                                "response": {
-                                    "result": "string"
-                                }
-                            },
-                            "text/json": {
-                                "response": {
-                                    "result": "string"
-                                }
-                            }
                         }
                     }
                 }
@@ -107,6 +95,17 @@
         "StringBaseResponse": {
             "type": "object",
             "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "errorCount": {
+                    "format": "int32",
+                    "type": "integer",
+                    "readOnly": true
+                },
                 "response": {
                     "type": "string"
                 }
