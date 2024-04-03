@@ -55,10 +55,10 @@
                         },
                         "examples": {
                             "application/json": {
-                                "response": "integer"
+                                "result": "integer"
                             },
                             "text/json": {
-                                "response": "integer"
+                                "result": "integer"
                             }
                         }
                     }
@@ -70,7 +70,7 @@
         "SumNumbersResponse": {
             "type": "object",
             "properties": {
-                "response": {
+                "result": {
                     "type": "integer"
                 }
             }
