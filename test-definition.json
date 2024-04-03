@@ -1,0 +1,116 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Test-APIM-EForms",
+        "version": "1.0"
+    },
+    "host": "test-eforms-apim-lf.azure-api.net",
+    "basePath": "/",
+    "schemes": [
+        "https"
+    ],
+    "securityDefinitions": {
+        "apiKeyHeader": {
+            "type": "apiKey",
+            "name": "Ocp-Apim-Subscription-Key",
+            "in": "header"
+        }
+    },
+    "security": [
+		{
+            "apiKeyHeader": []
+        }
+    ],
+    "paths": {
+        "/Base": {
+            "put": {
+                "operationId": "put-base",
+                "summary": "/Base - PUT",
+                "tags": [
+                    "Base"
+                ],
+                "parameters": [
+                    {
+                        "name": "MethodName",
+                        "in": "query",
+                        "type": "string"
+                    },
+                    {
+                        "name": "exception",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Exception"
+                        }
+                    }
+                ],
+                "consumes": [
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/SumNumbers": {
+            "get": {
+                "operationId": "",
+                "summary": "Sum Numbers - GET",
+                "parameters": [
+                    {
+                        "name": "num1",
+                        "in": "query",
+                        "description": "First number",
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "num2",
+                        "in": "query",
+                        "description": "Second number",
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "produces": [
+                    "text/plain",
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/StringBaseResponse"
+                        },
+                        "examples": {
+                            "application/json": {
+                                "response": {
+                                    "result": "string"
+                                }
+                            },
+                            "text/json": {
+                                "response": {
+                                    "result": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "StringBaseResponse": {
+            "type": "object",
+            "properties": {
+                "response": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
