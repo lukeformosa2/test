@@ -77,14 +77,14 @@
                     "200": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/StringBaseResponse"
+                            "$ref": "#/definitions/SumNumbersResponse"
                         },
                         "examples": {
                             "application/json": {
-                                "response": "string"
+                                "response": "integer"
                             },
                             "text/json": {
-                                "response": "string"
+                                "response": "integer"
                             }
                         }
                     }
@@ -93,22 +93,11 @@
         }
     },
     "definitions":{
-        "StringBaseResponse": {
+        "SumNumbersResponse": {
             "type": "object",
             "properties": {
-                "errors": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "errorCount": {
-                    "format": "int32",
-                    "type": "integer",
-                    "readOnly": true
-                },
                 "response": {
-                    "type": "string"
+                    "type": "integer"
                 }
             }
         }
