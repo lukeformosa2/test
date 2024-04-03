@@ -22,32 +22,6 @@
         }
     ],
     "paths": {
-        "/Base": {
-            "put": {
-                "operationId": "put-base",
-                "summary": "/Base - PUT",
-                "tags": [
-                    "Base"
-                ],
-                "parameters": [
-                    {
-                        "name": "MethodName",
-                        "in": "query",
-                        "type": "string"
-                    }
-                ],
-                "consumes": [
-                    "application/json",
-                    "text/json",
-                    "application/*+json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Success"
-                    }
-                }
-            }
-        },
         "/SumNumbers": {
             "get": {
                 "operationId": "SumNumbers",
