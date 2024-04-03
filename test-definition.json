@@ -22,39 +22,6 @@
         }
     ],
     "paths": {
-        "/Base": {
-            "put": {
-                "operationId": "put-base",
-                "summary": "/Base - PUT",
-                "tags": [
-                    "Base"
-                ],
-                "parameters": [
-                    {
-                        "name": "MethodName",
-                        "in": "query",
-                        "type": "string"
-                    },
-                    {
-                        "name": "exception",
-                        "in": "body",
-                        "schema": {
-                            "$ref": "#/definitions/Exception"
-                        }
-                    }
-                ],
-                "consumes": [
-                    "application/json",
-                    "text/json",
-                    "application/*+json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Success"
-                    }
-                }
-            }
-        },
         "/SumNumbers": {
             "get": {
                 "operationId": "",
@@ -83,31 +50,15 @@
                 "responses": {
                     "200": {
                         "description": "Success",
-                        "schema": {
-                            "$ref": "#/definitions/StringBaseResponse"
+                        "examples": {
+                            "application/json": {
+                                "result": {
+                                    "format": "int32",
+                                    "type": "integer"
+                                }
+                            }
                         }
                     }
-                }
-            }
-        }
-    },
-    "definitions": {
-        "StringBaseResponse": {
-            "type": "object",
-            "properties": {
-                "errors": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "errorCount": {
-                    "format": "int32",
-                    "type": "integer",
-                    "readOnly": true
-                },
-                "response": {
-                    "type": "string"
                 }
             }
         }
