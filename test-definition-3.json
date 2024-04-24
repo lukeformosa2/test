@@ -4,7 +4,7 @@
         "title": "Test-APIM-EForms",
         "version": "1.0"
     },
-    "host": "test-eforms-apim-lf.azure-api.net",
+    "host": "https://test-eforms-apim-lf.azure-api.net",
     "basePath": "/;rev=4",
     "schemes": [
         "https"
